@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-color:white;
+	}
+.column {
+  float: left;
+  width: 18.33%;
+  padding: 5px;
+  margin:0px 0px 0px 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+table {
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  font-size:25px;
+  border-collapse: collapse;
+  width: 100%;
+  margin:0px 0px 0px 30px;
+}
+td {
+  text-align:left;
+  padding: 8px;
+  height:50px;
+}
+.box{
+  width:100%;
+  border: 1px;
+  background-color:rgb(255, 204, 153);
+  padding: 10px;
+  margin: 10px;
+ }
+ input[type=submit]{
+  width:150px;
+  color: white;
+  background-color: black;
+  font-size:30px;
+}  
+input[type=radio]{
+  width:1.5em;
+height:1.5em;
+ border: 2px black;
+}  
+</style>
+</head>
+<body>
+    <div class="row">
+  <div class="column">
+ <img src="{{url_for('static',filename='1.jpg')}}" alt="p1" style="width:210px;height:210px;">
+ </div>
+ <div class="column">
+ <img src="{{url_for('static',filename='2.jpg')}}" alt="p1" style="width:210px;height:210px;">
+ </div>
+ <div class="column">
+ <img src="{{url_for('static',filename='3.jpg')}}" alt="p1" style="width:210px;height:210px;">
+ </div>
+ <div class="column">
+ <img src="{{url_for('static',filename='4.jpg')}}" alt="p1" style="width:210px;height:210px;">
+ </div>
+ <div class="column">
+ <img src="{{url_for('static',filename='6.jpg')}}" alt="p1" style="width:210px;height:210px;">
+ </div>
+</div>
+
+<center>
+<h1 style=" font-size:40px; font-family:garamond;"> MOVIE RECOMMENDER </h1>
+</center>
+<div class="box">
+<form action="/submit" method="get">
+<p style= font-size:30px>&nbsp&nbsp&nbsp&nbsp&nbsp<b>Select a Movie:</b></p>
+<table>
+ <tr>
+ <td> <input type="radio" name="movie" value="Avatar"><b>Avatar</b> </td> 
+ <td> <input type="radio" name="movie" value="Star Trek Beyond"><b>Star Trek Beyond </b></td> 
+ <td> <input type="radio" name="movie" value="Suicide Squad"><b>Suicide Squad</b> </td>
+ </tr>
+ <tr> 
+ <td><input type="radio" name="movie" value="Tangled"><b>Tangled</b> </td>
+ <td><input type="radio" name="movie" value="Inside Out"><b>Inside Out </b></td>
+ <td><input type="radio" name="movie" value="A Christmas Carol"><b>A Christmas Carol </b></td>
+ </tr>
+ <tr> 
+ <td> <input type="radio" name="movie" value="Aladdin"><b>Aladdin</b></td>
+<td> <input type="radio" name="movie" value="Iron Man"><b>Iron Man</b></td>
+<td> <input type="radio" name="movie" value="Edge of Tomorrow"><b>Edge of Tomorrow</b></td>
+ </tr>
+ </table>
+<br><br>
+<center><input type="submit" value="Submit"></center>
+</form>  
+</body>
+</html>
